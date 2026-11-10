@@ -9,57 +9,140 @@
     <link rel="stylesheet" href="style2.css">
     <style>
         * { box-sizing: border-box; }
+
         body {
-            margin: 0; min-height: 100vh; display: flex; justify-content: center;
-            align-items: center; padding: 24px; font-family: Arial, Helvetica, sans-serif;
-            color: #1f2937; background: linear-gradient(135deg, #eaf4ff, #f7fbff);
+            margin: 0;
+            min-height: 100vh;
+            padding: 24px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f2937;
+            background: linear-gradient(135deg, #eaf4ff, #f7fbff);
         }
+
         .container {
-            width: 100%; max-width: 560px; padding: 36px; background: #fff;
-            border: 1px solid #dbeafe; border-radius: 18px;
+            width: 100%;
+            max-width: 560px;
+            padding: 36px;
+            margin: 40px auto;
+            background: #fff;
+            border: 1px solid #dbeafe;
+            border-radius: 18px;
             box-shadow: 0 12px 35px rgba(37, 99, 235, .10);
         }
+
         .eyebrow {
-            margin: 0 0 10px; color: #2563eb; font-size: 12px; font-weight: 700;
-            letter-spacing: 2px; text-transform: uppercase;
+            margin: 0 0 10px;
+            color: #2563eb;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-        h1 { margin: 0 0 10px; color: #172554; font-size: clamp(25px, 5vw, 32px); line-height: 1.2; }
-        .description { margin: 0 0 26px; color: #64748b; font-size: 15px; line-height: 1.6; }
-        .search-form { display: flex; gap: 10px; }
+
+        h1 {
+            margin: 0 0 10px;
+            color: #172554;
+            font-size: clamp(25px, 5vw, 32px);
+            line-height: 1.2;
+        }
+
+        .description {
+            margin: 0 0 26px;
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+        }
+
         #elementInput {
-            flex: 1; min-width: 0; padding: 13px 15px; border: 1px solid #cbd5e1;
-            border-radius: 10px; outline: none; font-size: 16px;
+            flex: 1;
+            min-width: 0;
+            padding: 13px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
             transition: border-color .2s, box-shadow .2s;
         }
-        #elementInput:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, .15); }
+
+        #elementInput:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
+        }
+
         #searchButton {
-            padding: 13px 20px; border: 0; border-radius: 10px; background: #2563eb;
-            color: #fff; font-size: 15px; font-weight: 700; cursor: pointer;
+            padding: 13px 20px;
+            border: 0;
+            border-radius: 10px;
+            background: #2563eb;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
             transition: background .2s, transform .2s;
         }
-        #searchButton:hover { background: #1d4ed8; transform: translateY(-1px); }
-        #searchButton:active { transform: translateY(0); }
-        #output { margin-top: 22px; line-height: 1.7; }
-        #output:empty { display: none; }
-        #output > * {
-            padding: 18px; border: 1px solid #bfdbfe; border-radius: 12px;
-            background: #eff6ff; color: #1e3a8a;
+
+        #searchButton:hover {
+            background: #1d4ed8;
+            transform: translateY(-1px);
         }
-        .hint { margin: 16px 0 0; color: #94a3b8; font-size: 12px; text-align: center; }
+
+        #searchButton:active {
+            transform: translateY(0);
+        }
+
+        #output {
+            margin-top: 22px;
+            line-height: 1.7;
+        }
+
+        #output:empty {
+            display: none;
+        }
+
+        #output > * {
+            padding: 18px;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            background: #eff6ff;
+            color: #1e3a8a;
+        }
+
+        .hint {
+            margin: 16px 0 0;
+            color: #94a3b8;
+            font-size: 12px;
+            text-align: center;
+        }
+
         @media (max-width: 480px) {
-            .container { padding: 25px 20px; }
-            .search-form { flex-direction: column; }
-            #searchButton { width: 100%; }
+            .container {
+                padding: 25px 20px;
+            }
+
+            .search-form {
+                flex-direction: column;
+            }
+
+            #searchButton {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="Elementchecker.html">Element Checker</a>
         <a href="drill2.html">School Club Members</a>
         <a href="meetthecreator.html">Meet the Creator</a>
     </nav>
+
     <main class="container">
         <p class="eyebrow">Chemistry • Element Lookup</p>
         <h1>Periodic Table Information Finder</h1>
@@ -72,6 +155,8 @@
         <div id="output" aria-live="polite"></div>
         <p class="hint">Try a chemical symbol such as H, C, O, or Ne.</p>
     </main>
+
     <py-script src="main2.py"></py-script>
+
 </body>
 </html>
